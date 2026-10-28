@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向零基础的 Linux 四天 AWD 学习手册：命令参数、术语、PHP 与 HTTP 实验、分层挑战。离线可用。">
+  <title>Linux 入场 · 四天 AWD 学习手册</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="challenges.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#home" aria-label="Linux 入场首页"><span class="brand-icon">L<span>_</span></span><span>Linux 入场<small>AWD FIELD NOTES</small></span></a>
+    <div class="nav-caption">学习路径 <span>01 — 04</span></div>
+    <nav id="navigation" aria-label="主导航"></nav>
+    <div class="sidebar-bottom">
+      <div class="progress-label"><span>我的学习进度</span><strong id="side-progress">0%</strong></div>
+      <progress id="progress-bar" value="0" max="100" aria-label="学习任务完成率"></progress>
+      <p id="progress-description">从第一个命令开始。</p>
+      <button class="text-button muted" id="reset-progress" type="button">重置学习记录</button>
+      <div class="offline"><span></span> 本地保存 · 离线可学</div>
+    </div>
+  </aside>
+  <div class="mobile-overlay" id="mobile-overlay" hidden></div>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menu-button" aria-label="展开导航" aria-expanded="false" aria-controls="sidebar">☰</button>
+      <div class="breadcrumb">学习手册 <span>/</span> <span id="breadcrumb">路线总览</span></div>
+      <div class="top-actions"><span class="edition">LINUX / PHP / HTTP</span><button class="icon-button" id="theme-button" aria-label="切换为深色主题" title="切换主题">◐</button></div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer>LINUX 入场 <span>四天建立基础，练习形成判断。</span><span>适用 Ubuntu / Debian · Bash · GNU 工具</span></footer>
+  </div>
+  <dialog id="command-dialog" aria-labelledby="command-title"><div class="dialog-top"><span class="eyebrow">COMMAND NOTES</span><button class="icon-button" data-close aria-label="关闭命令讲解">×</button></div><div id="command-body"></div></dialog>
+  <dialog id="term-dialog" class="term-dialog" aria-labelledby="term-title"><div class="dialog-top"><span class="eyebrow">用简单的话解释</span><button class="icon-button" data-close aria-label="关闭术语解释">×</button></div><h2 id="term-title"></h2><p id="term-description"></p></dialog>
+  <dialog id="reset-dialog" class="term-dialog" aria-labelledby="reset-title"><h2 id="reset-title">重新开始学习？</h2><p>清除这份手册的任务勾选和挑战答题记录。主题设置会保留。</p><div class="button-row"><button class="button" data-close>保留记录</button><button class="button primary" id="confirm-reset">清除记录</button></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><div class="noscript">请启用浏览器 JavaScript，以查看课程、命令讲解与挑战。本手册不需要联网。</div></noscript>
+</body>
+</html>
